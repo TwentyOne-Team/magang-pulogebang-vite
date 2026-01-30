@@ -281,7 +281,7 @@ export const applicationsAPI = {
   // Create application with file upload
   create: async (formData: FormData) => {
     const token = getToken();
-    const url = `${API_BASE_URL}/applications`;
+    const url = `${API_BASE_URL}/api/applications`;
 
     try {
       const response = await fetch(url, {
@@ -361,7 +361,7 @@ export const chatAPI = {
 // Get file URL untuk download/preview through API endpoint (with CORS)
 export const getFileUrl = (filename: string): string => {
   if (!filename) return '';
-  return `${API_BASE_URL}/file/${filename}`;
+  return `${API_BASE_URL}/api/file/${filename}`;
 };
 
 // Check if user is authenticated
